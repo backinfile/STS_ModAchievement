@@ -1,0 +1,9 @@
+{
+  "modid": "ModAchievement",
+  "name": "Mod成就Achievement",
+  "author_list": ["不方不方", "tmc", "量子蟒蛇"],
+  "description": "Mod成就",
+  "version": "0.0.1",
+  "sts_version": "06-15-2018",
+  "mts_version": "2.7.0"
+}

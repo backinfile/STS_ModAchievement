@@ -1,0 +1,30 @@
+{
+  "ModAchievement:0": {
+    "CARD_COLOR": "",
+    "TITLE": "进阶0",
+    "DESCRIPTION": "{0}解锁进阶模式。",
+    "IMAGE": "ModAchievementResources/images/achievement/0.png",
+    "HIDDEN": false
+  },
+  "ModAchievement:10": {
+    "CARD_COLOR": "",
+    "TITLE": "进阶10",
+    "DESCRIPTION": "{0}通关进阶模式10。",
+    "IMAGE": "ModAchievementResources/images/achievement/10.png",
+    "HIDDEN": false
+  },
+  "ModAchievement:20": {
+    "CARD_COLOR": "",
+    "TITLE": "进阶20",
+    "DESCRIPTION": "{0}通关进阶模式20。",
+    "IMAGE": "ModAchievementResources/images/achievement/20.png",
+    "HIDDEN": false
+  },
+  "ModAchievement:TheEnd": {
+    "CARD_COLOR": "",
+    "TITLE": "终结",
+    "DESCRIPTION": "{0}通关‘终局’。",
+    "IMAGE": "ModAchievementResources/images/achievement/TheEnd.png",
+    "HIDDEN": false
+  }
+}
