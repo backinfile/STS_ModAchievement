@@ -98,6 +98,9 @@ public class TabBar {
         }
     }
 
+    public void refreshData() {
+        Fields.modTabIndex = 0;
+    }
 
 
     public static class Fields {

@@ -32,4 +32,14 @@ public class StatsScreenPatch {
             Lazy.tabBar.update(y + ___scrollY);
         }
     }
+
+    @SpirePatch2(
+            clz = StatsScreen.class,
+            method = "refreshData"
+    )
+    public static class RefreshData {
+        public static void Prefix(StatsScreen __instance) {
+            Lazy.tabBar.refreshData();
+        }
+    }
 }

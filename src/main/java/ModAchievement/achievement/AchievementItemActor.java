@@ -20,7 +20,7 @@ public class AchievementItemActor extends AchievementItem {
 
     public AchievementItemActor(String title, String desc, String imgUrl, String key, boolean hidden) {
         super(title, desc, imgUrl, key, hidden);
-        this.isUnlocked = AchievementManager.achievementPref.getBoolean(key, false);
+        this.isUnlocked = AchievementManager.isUnlock(key);
     }
 
     public AchievementItemActor(String title, String desc, String imgUrl, String key) {
