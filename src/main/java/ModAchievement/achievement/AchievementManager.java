@@ -19,6 +19,8 @@ import java.util.*;
 
 @SpireInitializer
 public class AchievementManager {
+
+    // %LOCALAPPDATA%\ModTheSpire\ModAchievement\achievementsSave.properties
     public static final String CONFIG_FILE_NAME = "achievementsSave";
 
     private static SpireConfig achievementSave;
@@ -32,7 +34,7 @@ public class AchievementManager {
         achievementMap.computeIfAbsent(color, c -> new ArrayList<>());
         AchievementConfig config = new AchievementConfig(key, title, desc, imgPath, hidden);
         achievementMap.get(color).add(config);
-        Log.logger.info("add achievement: {},{},{}", key, title, desc);
+        Log.logger.info("add achievement:{} {},{}", color, key, title);
     }
 
     public static boolean isUnlock(String key) {

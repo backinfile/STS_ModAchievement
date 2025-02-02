@@ -1,6 +1,6 @@
 {
-	"CardRatingMod:settingsPanel": {
-    "TEXT": ["解锁进阶20", "显示抽取约定牌堆的预览", "在右上角显示耗尽牌堆"],
+	"ModAchievement:AchievementUIText": {
+    "TEXT": ["原生成就", "成就解锁"],
     "EXTRA_TEXT": ["demo EXTRA_TEXT"],
     "TEXT_DICT": {}
   }

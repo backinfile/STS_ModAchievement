@@ -1,6 +1,7 @@
 package ModAchievement.effects;
 
 import ModAchievement.Log;
+import ModAchievement.ModPath;
 import ModAchievement.TextureLoader;
 import ModAchievement.achievement.AchievementConfig;
 import ModAchievement.achievement.AchievementItemActor;
@@ -14,9 +15,12 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 
 public class AchievementUnlockEffect extends AbstractGameEffect {
+    public static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(ModPath.makeID("AchievementUIText"));
+
     private final AchievementConfig config;
     public int state = 0;  // 0-enter 1-wait 2-leave
     private static final float DUR_ENTER = 0.3f;
@@ -73,7 +77,7 @@ public class AchievementUnlockEffect extends AbstractGameEffect {
                 break;
         }
 
-        renderTipBox(x, y, sb, "成就解锁", config.title);
+        renderTipBox(x, y, sb, uiStrings.TEXT[1], config.title);
     }
 
     private void renderTipBox(float x, float y, SpriteBatch sb, String title, String description) {

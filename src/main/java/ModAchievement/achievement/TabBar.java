@@ -2,6 +2,7 @@ package ModAchievement.achievement;
 
 import ModAchievement.Log;
 import ModAchievement.TextureLoader;
+import ModAchievement.effects.AchievementUnlockEffect;
 import basemod.BaseMod;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -137,7 +138,7 @@ public class TabBar {
         }
 
         public String getTabName() {
-            if (color == null) return "原生成就";
+            if (color == null) return AchievementUnlockEffect.uiStrings.TEXT[0];
             return playerClass != null ? BaseMod.findCharacter(playerClass).getLocalizedCharacterName() : capitalizeWord(color.toString());
         }
     }
