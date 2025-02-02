@@ -3,9 +3,11 @@ package ModAchievement;
 import ModAchievement.achievement.AchievementConfig;
 import ModAchievement.achievement.AchievementManager;
 import ModAchievement.achievement.ModAchievementStrings;
+import ModAchievement.effects.AchievementUnlockEffect;
 import basemod.BaseMod;
 import basemod.interfaces.EditStringsSubscriber;
 import basemod.interfaces.ISubscriber;
+import basemod.interfaces.OnPlayerTurnStartPostDrawSubscriber;
 import basemod.interfaces.PostInitializeSubscriber;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
@@ -18,6 +20,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.logging.log4j.LogManager;
@@ -34,7 +37,7 @@ import java.util.ArrayList;
 import java.util.Map;
 
 @SpireInitializer
-public class ModManager implements ISubscriber, EditStringsSubscriber, PostInitializeSubscriber {
+public class ModManager implements ISubscriber, EditStringsSubscriber, PostInitializeSubscriber, OnPlayerTurnStartPostDrawSubscriber {
     public static final Logger logger = LogManager.getLogger(ModPath.ModName);
 
     private static String modID;
@@ -168,6 +171,12 @@ public class ModManager implements ISubscriber, EditStringsSubscriber, PostIniti
     private static String getModdedLocalizationFilePath(String file, Settings.GameLanguage lang) {
         String language = lang.toString().toLowerCase();
         return ModPath.ModName + "/localization/" + language + "/" + file;
+    }
+
+
+    @Override
+    public void receiveOnPlayerTurnStartPostDraw() {
+//        AbstractDungeon.topLevelEffects.add(new AchievementUnlockEffect(new AchievementConfig("key", "title", "desc", "", false)));
     }
 
     // ====== NO EDIT AREA ======

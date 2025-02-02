@@ -57,4 +57,13 @@ public class BaseAchievementUnlockPatch {
             AchievementManager.unlock(key);
         }
     }
+
+    /*
+    * 约定牌堆卡牌＞99
+    * 两页遗物
+    * 耗尽每一种
+    * 台词碎心
+    * 用坏播放器
+    * 我在想起始口袋一张牌这个事件，可以和别的mod做个联动
+    * */
 }

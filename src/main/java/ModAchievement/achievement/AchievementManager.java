@@ -2,20 +2,20 @@ package ModAchievement.achievement;
 
 import ModAchievement.Log;
 import ModAchievement.ModPath;
+import ModAchievement.effects.AchievementUnlockEffect;
 import basemod.ReflectionHacks;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.Prefs;
 import com.megacrit.cardcrawl.helpers.SaveHelper;
 import com.megacrit.cardcrawl.screens.stats.AchievementItem;
 
 import java.io.IOException;
 import java.lang.reflect.Method;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Properties;
+import java.util.*;
 
 @SpireInitializer
 public class AchievementManager {
@@ -44,9 +44,18 @@ public class AchievementManager {
 
     public static void unlock(String key) {
         Log.logger.info("unlock key = {}", key);
-        if (achievementSave != null) {
+        if (achievementSave != null && !achievementSave.getBool(key)) {
             achievementSave.setBool(key, true);
             saveProperties();
+            CardCrawlGame.mainMenuScreen.statsScreen.refreshData();
+
+            for (Map.Entry<String, ArrayList<AchievementConfig>> entry : achievementMap.entrySet()) {
+                for (AchievementConfig config : entry.getValue()) {
+                    if (key.equals(config.key)) {
+                        AbstractDungeon.topLevelEffects.add(new AchievementUnlockEffect(config));
+                    }
+                }
+            }
         }
     }
 
