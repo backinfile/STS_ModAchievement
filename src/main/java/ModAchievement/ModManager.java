@@ -53,7 +53,11 @@ public class ModManager implements ISubscriber, EditStringsSubscriber, PostIniti
         new ModManager();
         Log.logger.info("========================= /" + ModPath.ModName + " Initialized. Hello World./ =========================");
     }
-
+//    public static void sideload() {
+//        Log.logger.info("========================= Side load Initializing " + ModPath.ModName + " Mod. =========================");
+//        new ModManager();
+//        Log.logger.info("========================= /" + ModPath.ModName + " Initialized. Hello World./ =========================");
+//    }
 
     @Override
     public void receiveEditStrings() {

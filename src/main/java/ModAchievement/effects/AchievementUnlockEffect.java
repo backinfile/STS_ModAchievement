@@ -21,6 +21,11 @@ import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 public class AchievementUnlockEffect extends AbstractGameEffect {
     public static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(ModPath.makeID("AchievementUIText"));
 
+    static {
+        Log.logger.info("===================== uiStrings:{}", uiStrings != null);
+    }
+
+
     private final AchievementConfig config;
     public int state = 0;  // 0-enter 1-wait 2-leave
     private static final float DUR_ENTER = 0.3f;

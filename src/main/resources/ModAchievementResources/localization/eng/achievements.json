@@ -1,0 +1,30 @@
+{
+  "ModAchievement:0": {
+    "CARD_COLOR": "",
+    "TITLE": "Ascend 0",
+    "DESCRIPTION": "{0} Unlock Ascension mode.",
+    "IMAGE": "ModAchievementResources/images/achievement/0.png",
+    "HIDDEN": false
+  },
+  "ModAchievement:10": {
+    "CARD_COLOR": "",
+    "TITLE": "Ascend 10",
+    "DESCRIPTION": "Complete Ascension Level 10 with The {0}.",
+    "IMAGE": "ModAchievementResources/images/achievement/10.png",
+    "HIDDEN": false
+  },
+  "ModAchievement:20": {
+    "CARD_COLOR": "",
+    "TITLE": "Ascend 20",
+    "DESCRIPTION": "Complete Ascension Level 20 with The {0}.",
+    "IMAGE": "ModAchievementResources/images/achievement/20.png",
+    "HIDDEN": false
+  },
+  "ModAchievement:TheEnd": {
+    "CARD_COLOR": "",
+    "TITLE": "The End?",
+    "DESCRIPTION": "Complete the Ending with the {0}.",
+    "IMAGE": "ModAchievementResources/images/achievement/TheEnd.png",
+    "HIDDEN": false
+  }
+}
